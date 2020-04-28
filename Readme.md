@@ -1,4 +1,45 @@
-# RestAssuredExample
+# Rest Assured Example
+
+This is a simple example of Rest Assured and a Gradle project which uses it.
+
+In the root directory of the project is the PowerPoint presentation named
+**2020-04-20-Rest-Assured.pptx**.
+
+The presentation will go through the basic and at the section for _Examples_
+you want to come here and run through the examples.
+
+At the time of writing this, I'm using external websites to hit the endpoints.
+This means that if the websites change or they take them down, this code
+might fail to work.
+
+## The Files
+
+The first file to look at is the **build.gradle**. The _dependencies_ section
+shows how to include the necessary libraries into your Gradle project. The
+dependencies are:
+
+```
+rest-assured
+json-path
+xml-path
+json-schema-validator
+junit
+assertj-core
+hamcrest
+```
+
+To run Rest Assured you need the _rest-assured_ dependency.<br>
+When doing API testing you are going to get back JSON and XML responses.<br>
+The _json-path_ and _xml-path_ dependencies will let you manipulate the
+responses.<br>
+Additionally, there is a _json-schema-validator_ dependency. This will let
+you compare the response against a JSON schema. A good way to smoke test
+that the response is in the correct format.<br>
+Finally, the _junit_, _assertj-core_ and _hamcrest_ dependencies are
+because we have set this up using a JUnit test framework. It is assumed
+you know how JUnit and matcher libraries, like Hamcrest and AssertJ, work.
+
+## RestAssuredExample
 This is using a REST endpoint at https://official-joke-api.appspot.com.
 There are a few different endpoints but the few we care about are:
 
@@ -54,14 +95,14 @@ If we look at the schema file:
 * Finally, we have the required field. This is an array of all the fields which must appear.
 There are 4 fields and they are all required.
 
-# RestAssuredExample2
+## RestAssuredExample2
 
 This is using an endpoint at https://postman-echo.com. Normally this for
 testing Postman but we can also use it to test Rest Assured as well.
 
 With this endpoint we can test GET, PUT and Basic Authentication.
 
-# RestAssuredExample3
+## RestAssuredExample3
 
 This is using the Telus website to show cookie manipulation and how we
 can hit a second endpoint in the same class.
