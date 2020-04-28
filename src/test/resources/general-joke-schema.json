@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "type": {
+        "type": "string"
+      },
+      "setup": {
+        "type": "string"
+      },
+      "punchline": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["id", "type", "setup", "punchline"]
+}
